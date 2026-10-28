@@ -32,9 +32,6 @@
     "README.md",
     "LICENSE"
   ],
-  "engines": {
-    "dsh": ">=0.2.1-rc.3"
-  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
