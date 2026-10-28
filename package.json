@@ -1,0 +1,47 @@
+{
+  "name": "dsh-usage-bar",
+  "version": "0.1.0",
+  "description": "在 DeepSeek Harness 底部显示本次会话的 token 用量与估算金额（人民币）",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "usage",
+    "tokens",
+    "cost"
+  ],
+  "author": "周杰 (jayden645253207-hub)",
+  "homepage": "https://github.com/jayden645253207-hub/dsh-usage-bar#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayden645253207-hub/dsh-usage-bar.git"
+  },
+  "icon": "./icon.svg",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.3"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "license": "MIT"
+}

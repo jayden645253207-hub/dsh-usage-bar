@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 120" width="900" height="120" role="img" aria-label="底部状态条示意图">
+  <rect width="900" height="120" fill="#ffffff"/>
+  <rect x="0" y="0" width="900" height="96" fill="#fafafa"/>
+  <line x1="0" y1="96" x2="900" y2="96" stroke="#e5e5e5" stroke-width="1"/>
+  <text x="24" y="42" font-family="ui-sans-serif, -apple-system, Arial" font-size="15" fill="#1f1f1f">本次会话</text>
+  <text x="112" y="42" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#8a8a8a">输入 128.4k</text>
+  <text x="230" y="42" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#8a8a8a">命中 87%</text>
+  <text x="340" y="42" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#8a8a8a">输出 12.1k</text>
+  <text x="700" y="42" font-family="ui-sans-serif, -apple-system, Arial" font-size="15" fill="#a0a0a0">高峰时段</text>
+  <text x="790" y="42" font-family="ui-sans-serif, -apple-system, Arial" font-size="15" font-weight="600" fill="#1f1f1f">估算 ¥0.31</text>
+  <text x="24" y="116" font-family="ui-sans-serif, -apple-system, Arial" font-size="11" fill="#b0b0b0">示意图：三栏下方整行的 shell.bottom 状态条（非截图）</text>
+</svg>

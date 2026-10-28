@@ -1,0 +1,6 @@
+# dsh-usage-bar — profile layer contributed by this bundle.
+# Inserting the package itself: the host half is an empty body, the browser half
+# is discovered from the `dsh.client` declaration in package.json.
+- insert:
+    - id: usage-bar
+      name: 'dsh-usage-bar'
