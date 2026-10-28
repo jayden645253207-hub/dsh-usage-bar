@@ -133,6 +133,19 @@ DSH 的插件是"双面包"：宿主半边 + 浏览器半边。
 - 持续内容与更新：公众号（上方二维码）
 - 其他联系：微信（上方二维码）
 
+## 发版（维护者）
+
+`docs/index.json` 里钉的是**具体 commit**，所以每次改完代码要重跑一次：
+
+```sh
+git add -A && git commit -m "feat: ..."     # 1. 先提交代码，拿到新的 HEAD
+node scripts/build-market-index.mjs          # 2. 用 HEAD 重新生成 docs/index.json
+git add docs && git commit -m "market: ..."  # 3. 提交索引并推送
+git push
+```
+
+索引由 GitHub Pages 从 `docs/` 发布，推送后约半分钟生效。忘了重跑的话，市场里装到的还是旧提交。
+
 ## 许可证
 
 [MIT](LICENSE) © 2026 周杰
