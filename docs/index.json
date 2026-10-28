@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "title": {
+    "en": "jayden's DSH plugins",
+    "zh": "周杰的 DSH 插件"
+  },
+  "description": {
+    "en": "Small DeepSeek Harness plugins by 周杰.",
+    "zh": "周杰自用并整理出来的 DeepSeek Harness 小插件。"
+  },
+  "metadata": {
+    "categories": {
+      "interface": {
+        "title": {
+          "en": "Interface",
+          "zh": "界面"
+        }
+      }
+    },
+    "labels": {
+      "usage": {
+        "title": {
+          "en": "Usage",
+          "zh": "用量"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-usage-bar",
+      "title": {
+        "en": "Usage bar",
+        "zh": "用量状态条"
+      },
+      "description": {
+        "en": "Session token usage and estimated cost (CNY) in the Harness bottom bar.",
+        "zh": "在 Harness 底部状态条显示本次会话的 token 用量与估算金额（人民币）。"
+      },
+      "icon": "icons/dsh-usage-bar.svg",
+      "author": "周杰 (jayden645253207-hub)",
+      "homepage": "https://github.com/jayden645253207-hub/dsh-usage-bar#readme",
+      "repository": {
+        "url": "https://github.com/jayden645253207-hub/dsh-usage-bar"
+      },
+      "metadata": {
+        "category": "interface",
+        "labels": [
+          "usage"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793156599,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/jayden645253207-hub/dsh-usage-bar",
+            "commit": "2b4f55a9de3bcc2aea13ab0b72b155f619077ace"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.3"
+          }
+        }
+      ]
+    }
+  ]
+}
