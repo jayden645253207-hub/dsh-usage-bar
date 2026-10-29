@@ -30,12 +30,12 @@
     {
       "name": "dsh-usage-bar",
       "title": {
-        "en": "Usage bar",
-        "zh": "用量状态条"
+        "en": "Usage chips",
+        "zh": "用量状态"
       },
       "description": {
-        "en": "Session token usage and estimated cost (CNY) in the Harness bottom bar.",
-        "zh": "在 Harness 底部状态条显示本次会话的 token 用量与估算金额（人民币）。"
+        "en": "Price window, session cost estimate and account balance under the composer.",
+        "zh": "在 Harness 输入框下方显示峰谷价、会话估算金额与账号余额。"
       },
       "icon": "icons/dsh-usage-bar.svg",
       "author": "周杰 (jayden645253207-hub)",
@@ -51,12 +51,12 @@
       },
       "versions": [
         {
-          "version": "0.1.0",
-          "publishTimestamp": 1793156798,
+          "version": "0.2.0",
+          "publishTimestamp": 1793248605,
           "source": {
             "type": "git",
             "url": "https://github.com/jayden645253207-hub/dsh-usage-bar",
-            "commit": "bf83c55e7d029b39856227bfa74d39a494be67a0"
+            "commit": "a955e21d47d9305cc3a40ee9538ce5cad198e965"
           }
         }
       ]
