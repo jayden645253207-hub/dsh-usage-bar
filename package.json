@@ -1,6 +1,6 @@
 {
   "name": "dsh-usage-bar",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "在 Harness 输入框下方显示峰谷价、会话估算金额与账号余额",
   "keywords": [
     "dsh",
@@ -40,5 +40,8 @@
       "platform": "web"
     }
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/"
+  }
 }

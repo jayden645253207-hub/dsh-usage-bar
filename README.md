@@ -119,10 +119,21 @@ DSH 的插件是"双面包"：宿主半边 + 浏览器半边。
 
 ## 已验证的范围
 
-- 计价、峰谷边界（含 12:00 / 18:00 的开闭区间、周末）、金额格式、余额结构折叠：有单元测试，全部通过。
-- 开发与自用环境：macOS 桌面版，DSH `0.2.1-rc.3`。
+```sh
+npm test        # 13 项，全过
+```
 
-没有验证：Windows、其他 DSH 版本、多个主会话并存的极端情况。`composer.dock` 插槽、`tokenUsage` 投影和账号远程方法都属于内部契约，版本升级后有可能失效；失效时先看浏览器控制台有没有 `composer.dock` 或 `client-modules` 的报错。
+- `test/pricing.test.mjs`：官方人民币价目、峰谷边界（含 12:00 / 18:00 的开闭区间、周末）、金额与余额格式、余额结构折叠。
+- `test/contract.test.mjs`：用最小 cordis 替身跑 `apply()`，校验槽位注册（`composer.dock` 带 `id` 与 `order`）、服务注入声明，以及组件在 props 缺失时不抛错。
+- 实际运行环境：macOS 桌面版，DSH `0.2.1-rc.3`。
+
+没有验证：Windows、其他 DSH 版本、多个主会话并存的极端情况。`composer.dock` 插槽、`tokenUsage` 投影和 `remote.account` 都属于 DSH 的内部契约，版本升级后有可能失效；失效时先看浏览器控制台里 `[dsh-usage-bar]` 或 `slot entry crashed` 开头的报错。
+
+### 踩过的坑（写给未来的自己）
+
+- `shell.overlay` 是 **list** 槽位，注册必须带 `id`，否则注册期直接抛错，还会连带把同一次 `apply()` 里后面的注册搅乱。
+- `remote.account` 必须在 `inject` 里显式声明（或用 `ctx.inject(["remote.account"])`），直接访问未声明的命名空间会被 Proxy 拦截并抛 `cannot get property ... without inject`。
+- 插槽注册失败时组件会拿到 `undefined` props，所以组件里要对 props 兜底，否则报错会以 `reading 'sessions'` 这种面目出现，掩盖真正的原因。
 
 ## 发版（维护者）
 
