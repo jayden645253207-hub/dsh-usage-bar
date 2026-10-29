@@ -51,12 +51,12 @@
       },
       "versions": [
         {
-          "version": "0.2.0",
-          "publishTimestamp": 1793249096,
+          "version": "0.2.1",
+          "publishTimestamp": 1793250015,
           "source": {
             "type": "git",
             "url": "https://github.com/jayden645253207-hub/dsh-usage-bar",
-            "commit": "da5726a70446d1ada88cc6e96cb4bbf2885c6534"
+            "commit": "0a7c4f2b8fc9238f0939c6961235c6c642c6cabc"
           }
         }
       ]
