@@ -1,12 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 120" width="900" height="120" role="img" aria-label="底部状态条示意图">
-  <rect width="900" height="120" fill="#ffffff"/>
-  <rect x="0" y="0" width="900" height="96" fill="#fafafa"/>
-  <line x1="0" y1="96" x2="900" y2="96" stroke="#e5e5e5" stroke-width="1"/>
-  <text x="24" y="42" font-family="ui-sans-serif, -apple-system, Arial" font-size="15" fill="#1f1f1f">本次会话</text>
-  <text x="112" y="42" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#8a8a8a">输入 128.4k</text>
-  <text x="230" y="42" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#8a8a8a">命中 87%</text>
-  <text x="340" y="42" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#8a8a8a">输出 12.1k</text>
-  <text x="700" y="42" font-family="ui-sans-serif, -apple-system, Arial" font-size="15" fill="#a0a0a0">高峰时段</text>
-  <text x="790" y="42" font-family="ui-sans-serif, -apple-system, Arial" font-size="15" font-weight="600" fill="#1f1f1f">估算 ¥0.31</text>
-  <text x="24" y="116" font-family="ui-sans-serif, -apple-system, Arial" font-size="11" fill="#b0b0b0">示意图：三栏下方整行的 shell.bottom 状态条（非截图）</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 140" width="900" height="140" role="img" aria-label="输入框下方状态行示意图">
+  <rect width="900" height="140" fill="#ffffff"/>
+  <rect x="40" y="16" width="820" height="62" rx="14" fill="#ffffff" stroke="#e5e5e5"/>
+  <text x="62" y="53" font-family="ui-sans-serif, -apple-system, Arial" font-size="15" fill="#8f8f8f">有什么可以帮你？</text>
+  <text x="330" y="100" font-family="ui-sans-serif, -apple-system, Arial" font-size="13" fill="#a0a0a0">4 轮 215 步 · 198 tok/s</text>
+  <text x="500" y="100" font-family="ui-sans-serif, -apple-system, Arial" font-size="13" fill="#a0a0a0">75.1M tok · 缓存命中 99%</text>
+  <text x="700" y="100" font-family="ui-sans-serif, -apple-system, Arial" font-size="13" fill="#1f1f1f">44%</text>
+  <text x="736" y="100" font-family="ui-sans-serif, -apple-system, Arial" font-size="13" fill="#a0a0a0">谷价</text>
+  <text x="772" y="100" font-family="ui-sans-serif, -apple-system, Arial" font-size="13" fill="#a0a0a0">·</text>
+  <text x="786" y="100" font-family="ui-sans-serif, -apple-system, Arial" font-size="13" fill="#a0a0a0">估算</text>
+  <text x="822" y="100" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#1f1f1f">¥2.64</text>
+  <text x="40" y="126" font-family="ui-sans-serif, -apple-system, Arial" font-size="11" fill="#b0b0b0">示意图：输入框下方的状态行，「估算」右侧还有「· 余额 ¥12.75」（此处换行显示不下）</text>
 </svg>

@@ -1,7 +1,7 @@
 {
   "name": "dsh-usage-bar",
-  "version": "0.1.0",
-  "description": "在 DeepSeek Harness 底部显示本次会话的 token 用量与估算金额（人民币）",
+  "version": "0.2.0",
+  "description": "在 Harness 输入框下方显示峰谷价、会话估算金额与账号余额",
   "keywords": [
     "dsh",
     "dsh-plugin",

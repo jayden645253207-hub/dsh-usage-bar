@@ -1,6 +1,6 @@
 # dsh-usage-bar
 
-> A bottom status bar for DeepSeek Harness: how many tokens this session has used, and roughly what it costs.
+> Three numbers on the line you are already looking at, right next to the context meter: current price window, this session's estimated cost, and the account balance.
 
 English | [中文](README.md)
 
@@ -28,13 +28,11 @@ Harness already shows per-reply token details and the account balance, but nothi
 
 | Field | Meaning |
 | --- | --- |
-| Input | Uncached input + cache reads (billable input total) |
-| Cached | Share of input served from cache |
-| Output | Output tokens |
-| Peak / Off-peak | The current official pricing window |
-| Estimate | Cost in CNY at the current window's unit prices |
+| Peak / Off-peak | The current official pricing window (Beijing time, weekdays 09:00-12:00 and 14:00-18:00 are peak) |
+| Estimate | This session's tokens priced at the current window, in CNY |
+| Balance | Account balance = topped-up + granted wallets, refreshed once a minute |
 
-Hover for the full breakdown: uncached input, cache reads, cache writes, output, the unit prices of the current model, and a reminder that this is an estimate, not a bill.
+Hover the estimate for the four token buckets, the model's unit prices, and a reminder that it is an estimate, not a bill. Hover the balance for the topped-up / granted split. When signed out or unreachable, the balance shows `—`.
 
 The numbers come from the `tokenUsage` session projection and accumulate over the whole durable session log, so a page refresh does not reset them.
 
@@ -98,13 +96,13 @@ A DSH plugin is a dual-face package:
 - `lib/index.js` (host) is empty; it only has to exist so the package can sit in the Cordis tree, which the host scans to compose the browser boot manifest.
 - `package.json` `dsh.client` exposes the `./client` entry, served by the host under `/plugins`.
 - `lib/client.js` is a `window.__ModuleLoader__.load({ id, factory })` bundle that only requires `react` (a platform seed module) and has no third-party dependencies.
-- The UI occupies the `shell.bottom` slot (the full-width strip below the three columns); with no session open the component returns `null` and reserves no height.
-- The current session is the entry with `retainedBy.mainView > 0` in `sessions.list` — the same predicate as DSH's own `uiSession.publishMain()`.
+- The three fields register into `conversation.composer.dock` (the row under the composer) and use CSS `order: 99` to sit after the context-percentage ring.
+- Token numbers come from `useProjection("tokenUsage")` and `useProjection("modelSelection")`; the balance calls `ctx.remote.account.getBalance()`, the same remote method the settings page uses.
 - The cost is recomputed once a minute so the peak/off-peak label follows the clock.
 
 ## Verified scope
 
-- Pricing, window boundaries (including the half-open ends at 12:00 and 18:00, and weekends) and number formatting have unit tests, all passing.
+- Pricing, window boundaries (including the half-open ends at 12:00 and 18:00, and weekends), number formatting and balance folding have unit tests, all passing.
 - Development environment: macOS desktop app, DSH `0.2.1-rc.3`.
 
 Not verified: Windows, other DSH versions, concurrent main sessions. The slot and projection APIs are internal contracts and may change between DSH versions; if the bar disappears, check the browser console for `shell.bottom` or `client-modules` errors.

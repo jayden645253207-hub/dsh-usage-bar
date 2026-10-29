@@ -34,10 +34,10 @@ const index = {
   plugins: [
     {
       name: pkg.name,
-      title: { en: "Usage bar", zh: "用量状态条" },
+      title: { en: "Usage chips", zh: "用量状态" },
       description: {
-        en: "Session token usage and estimated cost (CNY) in the Harness bottom bar.",
-        zh: "在 Harness 底部状态条显示本次会话的 token 用量与估算金额（人民币）。"
+        en: "Price window, session cost estimate and account balance under the composer.",
+        zh: "在 Harness 输入框下方显示峰谷价、会话估算金额与账号余额。"
       },
       icon: "icons/dsh-usage-bar.svg",
       author: "周杰 (jayden645253207-hub)",
